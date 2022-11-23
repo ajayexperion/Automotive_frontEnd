@@ -30,6 +30,8 @@ export default function SignUpPage() {
             password: passwordRef.current.value
            
         };
+        const myJSON = JSON.stringify(user);
+        console.log(myJSON);
         const response = await fetch('http://127.0.0.1:8000/api/signup/', {
           method: 'POST',
           body: JSON.stringify(user),
