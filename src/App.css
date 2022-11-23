@@ -87,16 +87,26 @@ body {
 
 /***    Login Page     ***/
 h2 {
-    font-weight: 300
+    font-weight: 300;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+h5 { 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+
 }
 
 form {
     display: inline-block;
-    background: #f3f3f3;
-    border: 1px solid #ddd;
-    border-radius: 2px;
+    background: #d6cece;
+    border: none;
+    /* box-shadow: 5px 10px; */
+    box-shadow:rgb(141, 140, 140) 5px 8px;
+    border-radius: 8px;
     padding: 2rem;
     margin: 2rem 0 1rem 0
+    
 }
 
 form label {
@@ -139,9 +149,11 @@ footer p {
     font-size: .9rem
 }
 
+
 /***    Register Page     ***/
 #checkbox {
     width: 1rem
+    
 }
 
 form span {
@@ -155,4 +167,7 @@ form span {
 /***    Home Page     ***/
 .home-page-title {
     color: #222
+}
+.state{
+    width: 240px;
 }
