@@ -24,13 +24,13 @@ export default function SignUpPage() {
             name: nameRef.current.value,
             state: stateRef.current.value,
             district: districtRef.current.value,
-            
-            email: emailRef.current.value,
-            password: passwordRef.current.value,
-            phno: phnoRef.current.value,
-            shopname: shopnameRef.current.value
+            shop_name: shopnameRef.current.value,
+            emailId: emailRef.current.value,
+            mobilenumber: phnoRef.current.value,
+            password: passwordRef.current.value
+           
         };
-        const response = await fetch('https://automotive-a56f3-default-rtdb.firebaseio.com/movies.json', {
+        const response = await fetch('http://127.0.0.1:8000/api/signup/', {
           method: 'POST',
           body: JSON.stringify(user),
         //   headers: {
@@ -80,21 +80,21 @@ export default function SignUpPage() {
                     </select>
                 </p>
                 <p>
-                    <label htmlFor='shopname'>Shope Name</label><br/>
-                    <input type="shopename" shope_name="shopename" required ref = {shopnameRef} />
+                    <label htmlFor='shop_name'>Shope Name</label><br/>
+                    <input type="text" shope_name="shop_name" required ref = {shopnameRef} />
                 </p> 
                 
                 <p>
-                    <label htmlFor='email' >Email address</label><br/>
-                    <input type="email" id="email" ref={emailRef}/>
+                    <label htmlFor='emailId' >Email address</label><br/>
+                    <input type="email" id="emailId" ref={emailRef}/>
                 </p>
                 <p>
                     <label htmlFor='password'>Password</label><br/>
                     <input type="password" name="password" ref={passwordRef} required />
                 </p>
                 <p>
-                    <label htmlFor='phno'>Phone Number</label><br/>
-                    <input type="phno" name="phno" ref={phnoRef} required />
+                    <label htmlFor='mobilenumber'>Phone Number</label><br/>
+                    <input type="phno" name="mobilenumber" ref={phnoRef} required />
                 </p>
                 
                 <p>
