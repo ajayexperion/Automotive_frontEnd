@@ -35,9 +35,9 @@ export default function SignUpPage() {
         const response = await fetch('http://127.0.0.1:8000/api/signup/', {
           method: 'POST',
           body: JSON.stringify(user),
-        //   headers: {
-        //     'Content-Type': 'application/json'
-        //   }
+          headers: {
+            'Content-Type': 'application/json'
+          }
         });
         const data = await response.json();
         console.log(data);
